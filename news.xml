@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Realm of Ashes - Najave</title>
+<link>https://discord.com/channels</link>
+<description>Objave sa Discord kanala</description>
+<atom:link href="https://nedimexe.github.io/realmofashes-news/news.xml" rel="self" type="application/rss+xml"/>
+<lastBuildDate>Wed, 09 Sep 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Dobrodosli u Realm of Ashes</title>
+    <link>https://discord.com/channels</link>
+    <guid isPermaLink="false">discord-welcome</guid>
+    <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Realm of Ashes</dc:creator>
+    <description><![CDATA[Dobrodosli u Realm of Ashes. Obavijesti sa Discord kanala ce se ovdje pojavljivati automatski.]]></description>
+    <content:encoded><![CDATA[Dobrodosli u <strong>Realm of Ashes</strong>.<br>Obavijesti sa Discord kanala ce se ovdje pojavljivati automatski.]]></content:encoded>
+    <slash:comments>0</slash:comments>
+  </item>
+</channel>
+</rss>

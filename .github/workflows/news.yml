@@ -1,0 +1,37 @@
+name: Discord News Feed
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch news from Discord
+        run: node scripts/fetch-news.mjs
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ vars.DISCORD_CHANNEL_ID }}
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet news.xml; then
+            echo "No changes to news.xml"
+          else
+            git add news.xml
+            git -c user.name="news-bot" -c user.email="news-bot@users.noreply.github.com" commit -m "Update news feed $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
